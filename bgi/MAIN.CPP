@@ -23,8 +23,8 @@ char fun[200] = {"A"};
 
 class punkt{
 	public:
-		punkt(int newx = 0, int newy = 0);
-		void setXY(int nx, int ny);
+		punkt(int newx = 0, int newy = 0):x(newx),y(newy){}
+		void setXY(int nx, int ny){x=nx; y=ny;}
 
 		~punkt(){}
 
@@ -33,16 +33,6 @@ class punkt{
 };
 
 //----------
-
-punkt::punkt(int newx, int newy){
-	x = newx;
-	y = newy;
-}
-
-void punkt::setXY(int nx, int ny){
-	x = nx;
-	y = ny;
-}
 
 #include "osie.cpp"
 #include "fun.cpp"
